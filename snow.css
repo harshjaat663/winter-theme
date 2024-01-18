@@ -1,0 +1,106 @@
+body{
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  width: 100vw;
+  background-image: url(background.jpg);
+  background-position: bottom;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.snowfall {
+  position: fixed;
+  top: -10vh;
+  left: 0;
+  z-index: 99;
+  width: 100vw;
+  height: 110vh;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.snowflake {
+  position: absolute;
+  width: 0.5vmax;
+  height: 0.5vmax;
+  pointer-events: none;
+  background-image: url(snowflake.png);
+  background-position: center;
+  background-size: contain;
+  border-radius: 50%;
+  animation-name: fallleft;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  animation-duration: 30s;
+  opacity: 50%;
+}
+.snowflake2 {
+  position: absolute;
+  width: 0.9vmax;
+  height: 0.9vmax;
+  pointer-events: none;
+  background-image: url(snowflake.png);
+  background-position: center;
+  background-size: contain;
+  border-radius: 50%;
+  animation-name: fallright;
+  animation-timing-function:ease-in-out;
+  animation-iteration-count: infinite;
+  animation-duration: 30s;
+  opacity: 75%;
+}
+.snowflake3 {
+  position: absolute;
+  width: 1.3vmax;
+  height: 1.3vmax;
+  pointer-events: none;
+  background-image: url(snowflake.png);
+  background-position: center;
+  background-size: contain;
+  border-radius: 50%;
+  animation-name: fallleft;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  animation-duration: 30s;
+  opacity: 75%;
+}
+
+@keyframes fallright {
+  0% {
+    transform: translateY(-110vh);
+    rotate: 0deg;
+  }
+  25%{
+    rotate:-10deg;
+  }
+  50%{
+    rotate:0deg;
+  }
+  75%{
+    rotate:-10deg;
+  }
+  100%{
+    transform: translateY(110vh);
+    rotate:0deg;
+  }
+}
+@keyframes fallleft  {
+  0% {
+    transform: translateY(-110vh);
+    rotate: 0deg;
+  }
+  25%{
+    rotate:10deg;
+  }
+
+  50%{
+    rotate:-0deg;
+  }
+  75%{
+    rotate:10deg;
+  }
+  100%{
+    transform: translateY(110vh);
+    rotate:-0deg;
+  }
+}
